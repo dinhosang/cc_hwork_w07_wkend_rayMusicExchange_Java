@@ -7,7 +7,9 @@ package com.codeclan.example.raymusicexchange.itemsToSell.nonInstruments.typeAnd
 public enum NonInstrumentMake {
 
 
-    OmniPress, AQUILA;
+    OMNIPRESS,
+    AQUILA,
+    OTHER;
 
 
     @Override

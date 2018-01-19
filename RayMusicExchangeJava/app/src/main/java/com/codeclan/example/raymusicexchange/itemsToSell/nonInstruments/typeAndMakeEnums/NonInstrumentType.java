@@ -8,8 +8,13 @@ public enum NonInstrumentType {
 
 
     STRINGS,
-    OTHER,
-    BOOK;
+    BOOK,
+    SHEETMUSIC,
+    DRUMSTICK,
+    AMPLIFIER,
+    PICK,
+    MUTE,
+    OTHER;
 
 
     @Override

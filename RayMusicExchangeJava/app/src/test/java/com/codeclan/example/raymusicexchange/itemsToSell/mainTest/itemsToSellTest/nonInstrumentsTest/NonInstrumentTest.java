@@ -39,7 +39,7 @@ public class NonInstrumentTest {
 
     @Test
     public void canGetMakeEnum(){
-        assertEquals(NonInstrumentMake.OmniPress, book.getMakeEnum());
+        assertEquals(NonInstrumentMake.OMNIPRESS, book.getMakeEnum());
     }
 
     @Test
