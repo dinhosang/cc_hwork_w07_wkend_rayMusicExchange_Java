@@ -22,10 +22,15 @@ public class NonInstrumentTest {
     @Before
     public void before(){
 
-        book = new NonInstrument(3, 7, NonInstrumentType.BOOK, NonInstrumentMake.OmniPress);
+        book = new NonInstrument(3, 7, "Learn All Music", NonInstrumentType.BOOK, NonInstrumentMake.OmniPress);
 
     }
 
+
+    @Test
+    public void canGetName(){
+        assertEquals("Learn All Music", book.getName());
+    }
 
     @Test
     public void canGetTypeEnum(){

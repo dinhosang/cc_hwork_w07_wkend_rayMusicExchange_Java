@@ -15,24 +15,30 @@ public class NonInstrument extends SaleItem {
     private NonInstrumentMake   makeEnum;
     private String              typeString;
     private String              makeString;
+    private String              name;
 
 
-    public NonInstrument(int wholesalePrice, int salePrice, NonInstrumentType type, NonInstrumentMake make) {
+    public NonInstrument(int wholesalePrice, int salePrice, String name, NonInstrumentType type, NonInstrumentMake make) {
 
         super(wholesalePrice, salePrice);
         setType(type, type.toString());
         setMake(make, make.toString());
+        this.name       = name;
 
     }
 
 
+    public String getName() {
+        return name;
+    }
+
     public void setType(NonInstrumentType type, String typeString) {
-        this.typeEnum = type;
+        this.typeEnum   = type;
         this.typeString = typeString;
     }
 
     public void setMake(NonInstrumentMake make, String makeString) {
-        this.makeEnum = make;
+        this.makeEnum   = make;
         this.makeString = makeString;
     }
 
@@ -51,4 +57,5 @@ public class NonInstrument extends SaleItem {
     public String getMakeString() {
         return this.makeString;
     }
+
 }
