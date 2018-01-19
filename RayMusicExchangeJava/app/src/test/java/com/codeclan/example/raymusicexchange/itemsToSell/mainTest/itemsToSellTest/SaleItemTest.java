@@ -22,7 +22,7 @@ public class SaleItemTest {
 
     @Before
     public void before(){
-        item = new NonInstrument(4, 6, "Learn All Music", NonInstrumentType.BOOK, NonInstrumentMake.OmniPress);
+        item = new NonInstrument(4, 6, "Learn All Music", NonInstrumentType.BOOK, NonInstrumentMake.OMNIRS);
     }
 
 

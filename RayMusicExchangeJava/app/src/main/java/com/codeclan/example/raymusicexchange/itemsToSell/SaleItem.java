@@ -34,4 +34,5 @@ public abstract class SaleItem {
     public void setSalePrice(int salePrice) {
         this.salePrice      = salePrice;
     }
+
 }

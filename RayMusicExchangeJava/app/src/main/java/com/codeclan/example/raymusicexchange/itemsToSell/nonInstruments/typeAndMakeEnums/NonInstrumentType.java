@@ -12,7 +12,7 @@ public enum NonInstrumentType {
     SHEETMUSIC,
     DRUMSTICK,
     AMPLIFIER,
-    PICK,
+    PLECTRUM,
     MUTE,
     OTHER;
 

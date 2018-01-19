@@ -22,7 +22,7 @@ public class NonInstrumentTest {
     @Before
     public void before(){
 
-        book = new NonInstrument(3, 7, "Learn All Music", NonInstrumentType.BOOK, NonInstrumentMake.OmniPress);
+        book = new NonInstrument(3, 7, "Learn All Music", NonInstrumentType.BOOK, NonInstrumentMake.OMNIRS);
 
     }
 
@@ -39,7 +39,7 @@ public class NonInstrumentTest {
 
     @Test
     public void canGetMakeEnum(){
-        assertEquals(NonInstrumentMake.OMNIPRESS, book.getMakeEnum());
+        assertEquals(NonInstrumentMake.OMNIRS, book.getMakeEnum());
     }
 
     @Test
@@ -61,6 +61,6 @@ public class NonInstrumentTest {
 
     @Test
     public void canGetMakeString(){
-        assertEquals("omnipress", book.getMakeString());
+        assertEquals("omnirs", book.getMakeString());
     }
 }

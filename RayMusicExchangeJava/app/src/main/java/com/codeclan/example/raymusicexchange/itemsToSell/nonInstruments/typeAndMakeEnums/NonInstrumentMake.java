@@ -6,9 +6,21 @@ package com.codeclan.example.raymusicexchange.itemsToSell.nonInstruments.typeAnd
 
 public enum NonInstrumentMake {
 
-
-    OMNIPRESS,
     AQUILA,
+    GOLDSON,
+    LARK,
+    OMNIRS,
+    ARCPOB,
+    CENTERMUSIC,
+    PROMAK,
+    VATAR,
+    TAMO,
+    FENBAR,
+    GIBBON,
+    TIMBAR,
+    SPARROW,
+    WALLEASE,
+    FACTOR,
     OTHER;
 
 
