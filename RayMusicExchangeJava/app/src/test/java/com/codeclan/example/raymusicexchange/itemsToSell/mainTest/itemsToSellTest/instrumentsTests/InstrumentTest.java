@@ -1,9 +1,11 @@
 package com.codeclan.example.raymusicexchange.itemsToSell.mainTest.itemsToSellTest.instrumentsTests;
 
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.Instrument;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.StringedInstrument.StringedInstrument;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentMake;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentType;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.stringedInstrument.StringedInstrument;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.woodwind.Woodwind;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentMake;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentMaterial;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentType;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,12 +20,14 @@ public class InstrumentTest {
 
 
     Instrument guitar;
+    Instrument saxophone;
 
 
     @Before
     public void before(){
 
-        guitar = new StringedInstrument(3, 6, "Model-MTC2", InstrumentType.GUITAR, InstrumentMake.FENBAR, 6);
+        guitar = new StringedInstrument(3, 6, "Model-MTC2", InstrumentMaterial.WOOD, InstrumentType.GUITAR, InstrumentMake.FENBAR, 6);
+        saxophone = new Woodwind(5,8, "Y8-HF3", InstrumentMaterial.BRASS, InstrumentType.SAXOPHONE, InstrumentMake.ZELMIRE, 6);
 
     }
 
@@ -54,8 +58,14 @@ public class InstrumentTest {
     }
 
     @Test
-    public void canPlayStringedInstrument(){
+    public void canGetMaterial(){
+        assertEquals(InstrumentMaterial.BRASS, saxophone.getMaterial());
+    }
+
+    @Test
+    public void canPlayDifferentInstrument(){
         assertEquals("The strings leave a pleasing sound", guitar.play());
+        assertEquals("A playful tune arises", saxophone.play());
     }
 
 

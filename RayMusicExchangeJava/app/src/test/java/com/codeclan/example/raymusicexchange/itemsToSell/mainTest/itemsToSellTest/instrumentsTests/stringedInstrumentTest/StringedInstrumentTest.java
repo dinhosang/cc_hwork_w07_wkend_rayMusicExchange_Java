@@ -1,8 +1,9 @@
 package com.codeclan.example.raymusicexchange.itemsToSell.mainTest.itemsToSellTest.instrumentsTests.stringedInstrumentTest;
 
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.StringedInstrument.StringedInstrument;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentMake;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentType;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.stringedInstrument.StringedInstrument;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentMake;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentMaterial;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentType;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +24,8 @@ public class StringedInstrumentTest {
     public void before(){
 
         viola = new StringedInstrument(5, 7, "Model-ATZ",
-                InstrumentType.VIOLA, InstrumentMake.CECIJHO, 4);
+                InstrumentMaterial.WOOD, InstrumentType.VIOLA,
+                InstrumentMake.CECIJHO, 4);
 
     }
 

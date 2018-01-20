@@ -1,4 +1,4 @@
-package com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums;
+package com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums;
 
 /**
  * Created by user on 19/01/2018.
@@ -7,7 +7,7 @@ package com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMak
 public enum InstrumentType {
 
 
-    GUITAR, VIOLA;
+    GUITAR, VIOLA, FLUTE, SAXOPHONE, TRUMPET, TUBA, PIANO, DRUM;
 
 
     @Override

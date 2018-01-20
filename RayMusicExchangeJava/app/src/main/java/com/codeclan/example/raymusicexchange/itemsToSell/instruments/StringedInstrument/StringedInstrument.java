@@ -1,8 +1,9 @@
-package com.codeclan.example.raymusicexchange.itemsToSell.instruments.StringedInstrument;
+package com.codeclan.example.raymusicexchange.itemsToSell.instruments.stringedInstrument;
 
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.Instrument;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentMake;
-import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentType;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentMake;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentMaterial;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeMakeMaterialEnums.InstrumentType;
 
 /**
  * Created by user on 19/01/2018.
@@ -14,9 +15,9 @@ public class StringedInstrument extends Instrument {
     private int numberOfStrings;
 
     
-    public StringedInstrument(int wholesalePrice, int salePrice, String name, InstrumentType typeEnum, InstrumentMake makeEnum, int numberOfStrings) {
+    public StringedInstrument(int wholesalePrice, int salePrice, String name, InstrumentMaterial material, InstrumentType typeEnum, InstrumentMake makeEnum, int numberOfStrings) {
         
-        super(wholesalePrice, salePrice, name, typeEnum, makeEnum);
+        super(wholesalePrice, salePrice, name, material, typeEnum, makeEnum);
         this.numberOfStrings = numberOfStrings;
         
     }
