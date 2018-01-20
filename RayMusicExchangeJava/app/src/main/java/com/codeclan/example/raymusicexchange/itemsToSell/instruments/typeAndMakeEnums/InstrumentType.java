@@ -7,7 +7,7 @@ package com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMak
 public enum InstrumentType {
 
 
-    GUITAR;
+    GUITAR, VIOLA;
 
 
     @Override

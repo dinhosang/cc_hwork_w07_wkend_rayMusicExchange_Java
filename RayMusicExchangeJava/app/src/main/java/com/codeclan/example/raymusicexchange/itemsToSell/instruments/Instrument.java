@@ -1,6 +1,5 @@
 package com.codeclan.example.raymusicexchange.itemsToSell.instruments;
 
-import com.codeclan.example.raymusicexchange.behaviours.IPlay;
 import com.codeclan.example.raymusicexchange.itemsToSell.SaleItem;
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentMake;
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentType;
@@ -9,7 +8,7 @@ import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMake
  * Created by user on 19/01/2018.
  */
 
-public class Instrument extends SaleItem implements IPlay {
+public abstract class Instrument extends SaleItem {
 
 
     protected String            name;
@@ -19,11 +18,12 @@ public class Instrument extends SaleItem implements IPlay {
     protected String            makeString;
 
 
-    public Instrument(int wholesalePrice, int salePrice, String name, InstrumentMake makeEnum) {
+    public Instrument(int wholesalePrice, int salePrice, String name, InstrumentType typeEnum, InstrumentMake makeEnum) {
 
         super(wholesalePrice, salePrice);
         this.name       = name;
         setMake(makeEnum, makeEnum.toString());
+        setType(typeEnum, typeEnum.toString());
         
 
     }
@@ -59,8 +59,6 @@ public class Instrument extends SaleItem implements IPlay {
         return makeString;
     }
 
-    public String play(){
-        return "ha";
-    }
+    public abstract String play();
 
 }

@@ -1,6 +1,7 @@
-package com.codeclan.example.raymusicexchange.itemsToSell.mainTest.itemsToSellTest.instrumentTest;
+package com.codeclan.example.raymusicexchange.itemsToSell.mainTest.itemsToSellTest.instrumentsTests;
 
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.Instrument;
+import com.codeclan.example.raymusicexchange.itemsToSell.instruments.StringedInstrument.StringedInstrument;
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentMake;
 import com.codeclan.example.raymusicexchange.itemsToSell.instruments.typeAndMakeEnums.InstrumentType;
 
@@ -22,8 +23,7 @@ public class InstrumentTest {
     @Before
     public void before(){
 
-        guitar = new Instrument(3, 6, "Model-MTC2", InstrumentMake.FENBAR);
-        guitar.setType(InstrumentType.GUITAR, InstrumentType.GUITAR.toString());
+        guitar = new StringedInstrument(3, 6, "Model-MTC2", InstrumentType.GUITAR, InstrumentMake.FENBAR, 6);
 
     }
 
@@ -44,17 +44,6 @@ public class InstrumentTest {
     }
 
     @Test
-    public void canSetType(){
-        assertEquals(InstrumentType.GUITAR, guitar.getTypeEnum());
-    }
-
-    @Test
-    public void canSetMake(){
-        guitar.setMake(InstrumentMake.ROBSON, InstrumentMake.ROBSON.toString());
-        assertEquals(InstrumentMake.ROBSON, guitar.getMakeEnum());
-    }
-
-    @Test
     public void canGetTypeString(){
         assertEquals("guitar", guitar.getTypeString());
     }
@@ -65,8 +54,8 @@ public class InstrumentTest {
     }
 
     @Test
-    public void canPlay(){
-        assertEquals("ha", guitar.play());
+    public void canPlayStringedInstrument(){
+        assertEquals("The strings leave a pleasing sound", guitar.play());
     }
 
 

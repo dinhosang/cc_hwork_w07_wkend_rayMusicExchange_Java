@@ -9,7 +9,7 @@ public enum InstrumentMake {
 
     RANDJ,
     ROBSON,
-    FENBAR;
+    FENBAR, CECIJHO;
 
 
     @Override
