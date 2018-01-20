@@ -47,4 +47,9 @@ public class SaleItemTest {
         item.setSalePrice(8);
     }
 
+    @Test
+    public void canCalculateMarkUpOnItem(){
+        assertEquals(2, item.calculateMarkUp());
+    }
+
 }

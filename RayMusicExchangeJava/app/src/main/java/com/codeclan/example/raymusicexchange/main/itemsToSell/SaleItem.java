@@ -35,4 +35,7 @@ public abstract class SaleItem {
         this.salePrice      = salePrice;
     }
 
+    public int calculateMarkUp() {
+        return this.salePrice - this.wholesalePrice;
+    }
 }

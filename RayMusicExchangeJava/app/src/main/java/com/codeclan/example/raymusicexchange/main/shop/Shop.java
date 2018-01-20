@@ -2,6 +2,7 @@ package com.codeclan.example.raymusicexchange.main.shop;
 
 import com.codeclan.example.raymusicexchange.main.itemsToSell.SaleItem;
 import com.codeclan.example.raymusicexchange.main.itemsToSell.instruments.stringedInstrument.StringedInstrument;
+import com.codeclan.example.raymusicexchange.main.itemsToSell.instruments.woodwind.Woodwind;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,14 +14,14 @@ import java.util.Arrays;
 public class Shop {
 
 
-    private String name;
-    private ArrayList<SaleItem> stock;
+    private String  name;
+    private Stock   stock;
 
 
     public Shop(String name) {
 
-        this.name = name;
-        this.stock = new ArrayList<>();
+        this.name   = name;
+        this.stock  = new Stock();
 
     }
 
@@ -30,10 +31,52 @@ public class Shop {
     }
 
     public int getStockSize() {
-        return this.stock.size();
+        return this.stock.getInventorySize();
     }
 
     public void addStock(SaleItem... items) {
-        this.stock.addAll(Arrays.asList(items));
+        this.stock.addInventory(items);
+    }
+
+    public void addStock(ArrayList<SaleItem> items) {
+        this.stock.addInventory(items);
+    }
+
+    public ArrayList<SaleItem> getAllStock() {
+        return stock.getInventory();
+    }
+
+    public int calculateMarkupOnSelectedItems(SaleItem... items) {
+        int totalMarkUp     = 0;
+
+        for(SaleItem item: items){
+            totalMarkUp     += item.calculateMarkUp();
+        }
+
+        return totalMarkUp;
+    }
+
+    public int calculateMarkupOnSelectedItems(ArrayList<SaleItem> items) {
+        int totalMarkUp     = 0;
+
+        for(SaleItem item: items){
+            totalMarkUp     += item.calculateMarkUp();
+        }
+
+        return totalMarkUp;
+    }
+
+    public int calculateTotalInventoryMarkup() {
+        int totalMarkUp     = 0;
+
+        for(SaleItem item: stock.getInventory()){
+            totalMarkUp     += item.calculateMarkUp();
+        }
+
+        return totalMarkUp;
+    }
+
+    public boolean hasItem(SaleItem item) {
+        return stock.hasItem(item);
     }
 }
