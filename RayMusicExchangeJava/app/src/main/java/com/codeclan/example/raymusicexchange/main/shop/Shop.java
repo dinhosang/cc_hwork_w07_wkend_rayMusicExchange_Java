@@ -67,13 +67,7 @@ public class Shop {
     }
 
     public int calculateTotalInventoryMarkup() {
-        int totalMarkUp     = 0;
-
-        for(SaleItem item: stock.getInventory()){
-            totalMarkUp     += item.calculateMarkUp();
-        }
-
-        return totalMarkUp;
+        return calculateMarkupOnSelectedItems(stock.getInventory());
     }
 
     public boolean hasItem(SaleItem item) {
